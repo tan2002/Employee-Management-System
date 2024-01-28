@@ -37,8 +37,7 @@ public class FirstPage extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae){
-        setVisible(true);
-        //new Login();
+        new Login();
     }
 
     public static void main(String[] args) {
