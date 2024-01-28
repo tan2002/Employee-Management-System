@@ -58,6 +58,7 @@ public class Login extends JFrame implements ActionListener {
             ResultSet rs = c.s.executeQuery(query);
             if(rs.next()){
                 setVisible(false);
+                new AddEmployee();
             }
             else{
                 JOptionPane.showMessageDialog(null,"Invalid Credential.");
