@@ -58,7 +58,7 @@ public class Login extends JFrame implements ActionListener {
             ResultSet rs = c.s.executeQuery(query);
             if(rs.next()){
                 setVisible(false);
-                new AddEmployee();
+                new Home();
             }
             else{
                 JOptionPane.showMessageDialog(null,"Invalid Credential.");
@@ -68,7 +68,6 @@ public class Login extends JFrame implements ActionListener {
         catch(Exception e){
             e.printStackTrace();
         }
-        //C.close();
     }
     public static void main(String[] args) {
         new Login();

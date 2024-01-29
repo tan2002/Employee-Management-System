@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.util.Random;
 
 import com.toedter.calendar.JDateChooser;
@@ -127,10 +128,10 @@ public class AddEmployee extends JFrame implements ActionListener {
         adharField.setBounds(600,350,150,30);
         image.add(adharField);
 
-        JLabel empIdLabel = new JLabel("Employee ID");
-        empIdLabel.setBounds(50,400,150,30);
-        empIdLabel.setFont(new Font("SAN_SERIF",Font.PLAIN,20));
-        image.add(empIdLabel);
+        JLabel LabelEmpId = new JLabel("Employee ID");
+        LabelEmpId.setBounds(50,400,150,30);
+        LabelEmpId.setFont(new Font("SAN_SERIF",Font.PLAIN,20));
+        image.add(LabelEmpId);
 
         empIdLabel = new JLabel(""+num);
         empIdLabel.setBounds(200,400,150,30);
@@ -169,11 +170,11 @@ public class AddEmployee extends JFrame implements ActionListener {
 
             try{
                 Connect c = new Connect();
-                String query = "insert into employee values('"+name+"','"+fname+"','"+dob+"','"+salary+"','"+address+"','"+phone+"','"+email+"','"+education+"','"+designation+"','"+adhar+"','"+empId+"')";
-                c.s.executeQuery(query);
+                String query = "insert into employee values('"+name+"', '"+fname+"', '"+dob+"', '"+salary+"', '"+address+"', '"+phone+"', '"+email+"', '"+education+"', '"+designation+"', '"+adhar+"', '"+empId+"')";
+                c.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null,"Details added successfully");
                 setVisible(false);
-                // new Home();
+                new Home();
             }
             catch(Exception e){
                 e.printStackTrace();
@@ -181,7 +182,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         }
         else{
             setVisible(false);
-            //new Home();
+            new Home();
         }
     }
     public static void main(String[] args) {
