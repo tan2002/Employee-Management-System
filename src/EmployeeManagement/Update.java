@@ -17,6 +17,7 @@ public class Update extends JFrame implements ActionListener {
         setSize(1170,620);
         setLocation(50,50);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.empId = empId;
 
         JLabel heading = new JLabel("UPDATE EMPLOYEE DETAIL");

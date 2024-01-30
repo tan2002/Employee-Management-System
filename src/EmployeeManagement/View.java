@@ -18,6 +18,7 @@ public class View extends JFrame implements ActionListener {
         setSize(1170,620);
         setLocation(50,50);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel searchEmpId = new JLabel("Search by Employee ID");
         searchEmpId.setBounds(50,25,200,20);

@@ -13,6 +13,7 @@ public class Home extends JFrame implements ActionListener {
         setSize(1170,620);
         setLocation(50,50);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/home.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1170,650,Image.SCALE_DEFAULT);
@@ -70,6 +71,7 @@ public class Home extends JFrame implements ActionListener {
         }
         else{
             setVisible(false);
+            new Remove();
         }
     }
 

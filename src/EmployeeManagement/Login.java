@@ -14,6 +14,7 @@ public class Login extends JFrame implements ActionListener {
         setVisible(true);
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel userLabel = new JLabel("Username");
         userLabel.setBounds(40,20,100,30);
