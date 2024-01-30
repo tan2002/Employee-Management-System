@@ -20,12 +20,12 @@ public class View extends JFrame implements ActionListener {
         setVisible(true);
 
         JLabel searchEmpId = new JLabel("Search by Employee ID");
-        searchEmpId.setBounds(50,25,400,30);
+        searchEmpId.setBounds(50,25,200,20);
         searchEmpId.setFont(new Font("Serif",Font.PLAIN,18));
         add(searchEmpId);
 
         employeeId = new Choice();
-        employeeId.setBounds(250,25,150,30);
+        employeeId.setBounds(250,25,150,20);
         add(employeeId);
 
         try{
@@ -47,9 +47,9 @@ public class View extends JFrame implements ActionListener {
         catch(Exception e){
             e.printStackTrace();
         }
-        JScrollPane jap = new JScrollPane(table);
-        jap.setBounds(50,100,1050,600);
-        add(jap);
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(50,100,1050,600);
+        add(jsp);
 
         search = new JButton("Search");
         search.setBounds(50,60,120,30);
@@ -103,6 +103,7 @@ public class View extends JFrame implements ActionListener {
         }
         else if(ae.getSource()==update){
             setVisible(false);
+            new Update(employeeId.getSelectedItem());
         }
         else{
             setVisible(false);
