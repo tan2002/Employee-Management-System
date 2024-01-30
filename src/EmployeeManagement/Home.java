@@ -25,7 +25,7 @@ public class Home extends JFrame implements ActionListener {
         add = new JButton();
         add.setText("Add Employee");
         add.setBounds(700,30,175,35);
-        add.setBackground(Color.WHITE);
+        add.setBackground(new Color(204,255,255));
         add.addActionListener(this);
         add.setForeground(Color.black);
         image.add(add);
@@ -33,7 +33,7 @@ public class Home extends JFrame implements ActionListener {
         view = new JButton();
         view.setText("View Employee");
         view.setBounds(900,30,175,35);
-        view.setBackground(Color.white);
+        view.setBackground(new Color(204,255,255));
         view.setForeground(Color.black);
         view.addActionListener(this);
         image.add(view);
@@ -41,7 +41,7 @@ public class Home extends JFrame implements ActionListener {
         update = new JButton();
         update.setText("Update Employee");
         update.setBounds(700,80,175,35);
-        update.setBackground(Color.WHITE);
+        update.setBackground(new Color(204,255,255));
         update.setForeground(Color.black);
         update.addActionListener(this);
         image.add(update);
@@ -49,7 +49,7 @@ public class Home extends JFrame implements ActionListener {
         remove = new JButton();
         remove.setText("Remove Employee");
         remove.setBounds(900,80,175,35);
-        remove.setBackground(Color.white);
+        remove.setBackground(new Color(204,255,255));
         remove.setForeground(Color.black);
         remove.addActionListener(this);
         image.add(remove);

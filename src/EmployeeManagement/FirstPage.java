@@ -29,8 +29,8 @@ public class FirstPage extends JFrame implements ActionListener {
 
         JButton click = new JButton("CLICK HERE TO CONTINUE");
         click.setBounds(415,400,300,70);
-        click.setBackground(Color.BLACK);
-        click.setForeground(Color.WHITE);
+        click.setBackground(new Color(204,255,255));
+        click.setForeground(Color.black);
         click.addActionListener(this);
         image.add(click);
     }
